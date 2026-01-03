@@ -13,24 +13,65 @@ let config = { cols: 20, rows: 20, cellSize: 30, peekTime: 5, lightRadius: 3 };
 let grid = [], stack = [], player = { x: 0, y: 0 }, goal = { x: 0, y: 0 };
 let gameActive = false, isDark = false, canPulse = true;
 let explored = new Set();
+let audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // For Sound
 
 // Difficulty Presets
 const levels = {
-    easy:   { cols: 10, rows: 10, peekTime: 5, lightRadius: 120 }, // Big flashlight
-    medium: { cols: 20, rows: 20, peekTime: 5, lightRadius: 80  }, // Normal flashlight
-    hard:   { cols: 30, rows: 30, peekTime: 3, lightRadius: 50  }  // Tiny flashlight
+    easy:   { cols: 10, rows: 10, peekTime: 5, lightRadius: 120 }, 
+    medium: { cols: 20, rows: 20, peekTime: 5, lightRadius: 80  }, 
+    hard:   { cols: 30, rows: 30, peekTime: 3, lightRadius: 50  } 
 };
+
+// --- SOUND SYSTEM (Synthesized Retro Sounds) ---
+function playSound(type) {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+
+    const now = audioCtx.currentTime;
+    if (type === 'step') {
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(200, now);
+        osc.frequency.exponentialRampToValueAtTime(50, now + 0.1);
+        gain.gain.setValueAtTime(0.1, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+        osc.start(now);
+        osc.stop(now + 0.1);
+    } else if (type === 'bump') {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(100, now);
+        osc.frequency.linearRampToValueAtTime(50, now + 0.1);
+        gain.gain.setValueAtTime(0.1, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+        osc.start(now);
+        osc.stop(now + 0.1);
+    } else if (type === 'win') {
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(400, now);
+        osc.frequency.setValueAtTime(600, now + 0.1);
+        osc.frequency.setValueAtTime(1000, now + 0.2);
+        gain.gain.setValueAtTime(0.1, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.5);
+        osc.start(now);
+        osc.stop(now + 0.5);
+    } else if (type === 'pulse') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(200, now);
+        osc.frequency.linearRampToValueAtTime(800, now + 0.5);
+        gain.gain.setValueAtTime(0.1, now);
+        gain.gain.linearRampToValueAtTime(0, now + 0.5);
+        osc.start(now);
+        osc.stop(now + 0.5);
+    }
+}
 
 // --- INITIALIZATION ---
 function selectDifficulty(level) {
     const selected = levels[level];
-    
-    // Calculate cell size based on canvas (max 600px)
     const size = 600 / selected.cols;
-    config = { 
-        ...selected, 
-        cellSize: size 
-    };
+    config = { ...selected, cellSize: size };
 
     menuScreen.classList.add('hidden');
     gameScreen.classList.remove('hidden');
@@ -76,13 +117,11 @@ function index(c, r) {
     return c + r * config.cols;
 }
 
-// --- CORE GAME LOGIC ---
 function setup() {
     grid = []; stack = []; explored = new Set();
     player = { x: 0, y: 0 };
     goal = { x: config.cols - 1, y: config.rows - 1 };
     
-    // Resize Canvas
     canvas.width = 600;
     canvas.height = 600;
 
@@ -90,7 +129,6 @@ function setup() {
         for (let c = 0; c < config.cols; c++) grid.push(new Cell(c, r));
     }
     
-    // Maze Gen
     let current = grid[0];
     current.visited = true;
     while (true) {
@@ -119,10 +157,7 @@ function removeWalls(a, b) {
 
 function startCountdown() {
     let t = config.peekTime;
-    isDark = false;
-    canPulse = true;
-    gameActive = false;
-    pulseBtn.disabled = true;
+    isDark = false; canPulse = true; gameActive = false; pulseBtn.disabled = true;
     draw();
     
     let timer = setInterval(() => {
@@ -130,9 +165,7 @@ function startCountdown() {
         t--;
         if (t < 0) {
             clearInterval(timer);
-            isDark = true;
-            gameActive = true;
-            pulseBtn.disabled = false;
+            isDark = true; gameActive = true; pulseBtn.disabled = false;
             instructionsEl.innerHTML = `<strong>Go!</strong> Find the Green Zone.`;
             draw();
         }
@@ -142,53 +175,47 @@ function startCountdown() {
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // 1. Draw Maze Background (White)
+    // 1. Draw Maze
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < grid.length; i++) grid[i].show();
 
-    // 2. Draw Grid/Walls
-    for (let i = 0; i < grid.length; i++) {
-        grid[i].show();
-    }
-
-    // 3. Draw Player & Goal
+    // 2. Draw Player & Goal
     let cs = config.cellSize;
-    ctx.fillStyle = '#ef4444'; // Red Player
+    ctx.fillStyle = '#ef4444'; 
     ctx.fillRect(player.x * cs + 4, player.y * cs + 4, cs - 8, cs - 8);
 
-    ctx.fillStyle = '#10b981'; // Green Goal
+    ctx.fillStyle = '#10b981'; 
     ctx.fillRect(goal.x * cs + 4, goal.y * cs + 4, cs - 8, cs - 8);
 
-    // 4. THE FLASHLIGHT EFFECT (Gradient Layer)
+    // 3. FLASHLIGHT EFFECT & BREADCRUMBS
     if (isDark) {
-        // Create a temporary canvas/layer for darkness
-        ctx.globalCompositeOperation = 'source-over';
-        
-        // Calculate Player Center in Pixels
-        let px = (player.x * cs) + (cs / 2);
-        let py = (player.y * cs) + (cs / 2);
-
-        // Create Radial Gradient (Light -> Dark)
-        let gradient = ctx.createRadialGradient(px, py, 10, px, py, config.lightRadius);
-        gradient.addColorStop(0, "rgba(0,0,0,0)");       // Transparent center
-        gradient.addColorStop(0.2, "rgba(0,0,0,0.1)");   // Slight fade
-        gradient.addColorStop(1, "rgba(0,0,0,1)");       // Solid black
-
-        // Fill the whole screen with black, BUT use the gradient to "cut out" the light
-        // Actually, simpler approach: Draw full black, then 'destination-out' the light? 
-        // No, 'fillStyle = gradient' won't work for "inverse".
-        
-        // Correct Approach: Draw a huge black rectangle with a "hole".
-        // Easier way: 
+        // Draw Breadcrumbs (Explored Tiles) ON TOP of the white maze, but UNDER the darkness
+        // Actually, we will draw them ON TOP of the darkness to make them visible "HUD" style
+        // Create Darkness Layer
         ctx.fillStyle = "black";
         ctx.beginPath();
         ctx.rect(0, 0, canvas.width, canvas.height);
-        ctx.arc(px, py, config.lightRadius, 0, Math.PI * 2, true); // The hole
+        
+        // Cut out Flashlight hole
+        let px = (player.x * cs) + (cs / 2);
+        let py = (player.y * cs) + (cs / 2);
+        ctx.arc(px, py, config.lightRadius, 0, Math.PI * 2, true);
         ctx.fill();
 
-        // 5. Draw Explored Paths (Dimly visible through darkness)
-        // (Optional: If you want visited tiles to stay dim-lit, it gets complex with gradients. 
-        // For "Interactive" feel, the flashlight is usually enough).
+        // Draw Breadcrumbs (Faint grey dots on visited tiles)
+        ctx.fillStyle = "rgba(100, 116, 139, 0.4)"; // Faint grey
+        explored.forEach(idx => {
+            let c = idx % config.cols;
+            let r = Math.floor(idx / config.cols);
+            // Don't draw on player or inside flashlight radius (optional, but looks cleaner)
+            let dist = Math.hypot(c - player.x, r - player.y);
+            if (dist > (config.lightRadius / config.cellSize)/1.5) { 
+                ctx.beginPath();
+                ctx.arc((c * cs) + (cs/2), (r * cs) + (cs/2), cs/5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        });
     }
 }
 
@@ -199,17 +226,30 @@ function movePlayer(dx, dy) {
     let nextX = player.x + dx;
     let nextY = player.y + dy;
     
-    if (nextX < 0 || nextY < 0 || nextX >= config.cols || nextY >= config.rows) return;
-    if (dx === 1 && curr.walls[1]) return;
-    if (dx === -1 && curr.walls[3]) return;
-    if (dy === 1 && curr.walls[2]) return;
-    if (dy === -1 && curr.walls[0]) return;
+    // Check Walls/Bounds
+    let hitWall = false;
+    if (nextX < 0 || nextY < 0 || nextX >= config.cols || nextY >= config.rows) hitWall = true;
+    else if (dx === 1 && curr.walls[1]) hitWall = true;
+    else if (dx === -1 && curr.walls[3]) hitWall = true;
+    else if (dy === 1 && curr.walls[2]) hitWall = true;
+    else if (dy === -1 && curr.walls[0]) hitWall = true;
 
+    if (hitWall) {
+        playSound('bump');
+        shakeScreen(); // Visual feedback
+        return;
+    }
+
+    // Move
     player.x = nextX;
     player.y = nextY;
+    explored.add(index(player.x, player.y)); // Add to breadcrumbs
+    playSound('step');
     draw();
 
+    // Win Check
     if (player.x === goal.x && player.y === goal.y) {
+        playSound('win');
         gameActive = false;
         isDark = false;
         draw();
@@ -217,6 +257,12 @@ function movePlayer(dx, dy) {
         messageEl.innerText = "You Escaped! 🏆";
         restartBtn.innerText = "Menu";
     }
+}
+
+function shakeScreen() {
+    canvas.style.transform = "translate(4px, 0)";
+    setTimeout(() => { canvas.style.transform = "translate(-4px, 0)"; }, 50);
+    setTimeout(() => { canvas.style.transform = "translate(0, 0)"; }, 100);
 }
 
 // --- CONTROLS ---
@@ -232,7 +278,8 @@ window.addEventListener('keydown', (e) => {
 function triggerPulse() {
     canPulse = false;
     pulseBtn.disabled = true;
-    isDark = false; // Reveal map
+    isDark = false; 
+    playSound('pulse');
     draw();
     pulseBtn.innerText = "Recharging...";
     
@@ -244,15 +291,10 @@ function triggerPulse() {
                 canPulse = true;
                 pulseBtn.disabled = false;
                 pulseBtn.innerText = "💡 Pulse (Space)";
-            }, 3000); // 3s Cooldown
+            }, 3000); 
         }
-    }, 500); // 0.5s Reveal duration
+    }, 500); 
 }
 
-pulseBtn.addEventListener('click', () => {
-    if (gameActive && canPulse) triggerPulse();
-});
-
-restartBtn.addEventListener('click', () => {
-    location.reload(); // Simplest way to go back to menu cleanly
-});
+pulseBtn.addEventListener('click', () => { if (gameActive && canPulse) triggerPulse(); });
+restartBtn.addEventListener('click', () => { location.reload(); });

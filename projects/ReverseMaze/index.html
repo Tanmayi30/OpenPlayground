@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reverse Maze - OpenPlayground</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -14,6 +14,7 @@
         <div id="menu-screen">
             <p class="subtitle">Memorize the path. Survive the dark.</p>
             <h3>Select Difficulty</h3>
+            
             <div class="difficulty-options">
                 <button class="diff-btn easy" onclick="selectDifficulty('easy')">
                     <span class="emoji">🕯️</span>
@@ -31,6 +32,7 @@
                     <span class="desc">30x30 • Tiny Light</span>
                 </button>
             </div>
+            
             <a href="../../index.html" class="back-link">← Back to Playground</a>
         </div>
 
@@ -42,14 +44,17 @@
             
             <div class="game-wrapper">
                 <canvas id="mazeCanvas" width="600" height="600"></canvas>
+                
                 <div id="overlay" class="hidden">
                     <h2 id="message"></h2>
-                    <button id="restartBtn">Menu</button>
+                    <button id="restartBtn">Back to Menu</button>
                 </div>
             </div>
+
             <button class="stop-btn" onclick="location.reload()">Quit Game</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
