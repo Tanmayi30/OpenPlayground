@@ -205,5 +205,16 @@
     "link": "./projects/Insta_bio_suggesstion/index.html",
     "icon": "ri-user-line",
     "coverStyle": "background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); color: #7c2d12;"
-  }
+  },
+ {
+  "title": "Hangman Game",
+  "category": "game",
+  "description": "Guess the hidden word one letter at a time before running out of attempts.",
+  "tech": ["HTML", "CSS", "JS"],
+  "link": "./projects/hangman-game/index.html",
+  "icon": "ri-keyboard-line",
+  "coverClass": "hangman-cover"
+}
+
+
 ]
