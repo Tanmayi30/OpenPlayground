@@ -12,6 +12,14 @@
     box-sizing: border-box;
 }
 
+/* Highlight for search */
+mark {
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
 /* ===============================
      Chatbot Styles (OpenPlayground Assistant)
      =============================== */
@@ -836,9 +844,22 @@ html[data-theme="dark"] .section-badge {
     min-width: 200px;
 }
 
-.sort-box select {
+.search-clear {
+    background: none;
+    border: none;
+    color: var(--text-muted);
     cursor: pointer;
-    min-width: 140px;
+    padding: 0;
+    display: none;
+    transition: color var(--transition-fast);
+}
+
+.search-clear:hover {
+    color: var(--text-primary);
+}
+
+.search-box.has-text .search-clear {
+    display: block;
 }
 
 /* Category Filter */

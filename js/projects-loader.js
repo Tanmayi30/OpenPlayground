@@ -48,7 +48,7 @@ class ProjectsLoader {
         card.className = 'card';
         card.dataset.category = project.category;
         
-        const techTags = project.tech.map(t => `<span>${t}</span>`).join('');
+        const techTags = project.tech.map(t => `<span>${this.highlightText(t, this.currentSearch)}</span>`).join('');
         
         card.innerHTML = `
             <div class="card-cover" style="${project.coverStyle}">
@@ -56,10 +56,10 @@ class ProjectsLoader {
             </div>
             <div class="card-content">
                 <div class="card-header-flex">
-                    <h3 class="card-heading">${project.title}</h3>
-                    <span class="category-tag">${this.capitalizeFirst(project.category)}</span>
+                    <h3 class="card-heading">${this.highlightText(project.title, this.currentSearch)}</h3>
+                    <span class="category-tag">${this.capitalizeFirst(this.highlightText(project.category, this.currentSearch))}</span>
                 </div>
-                <p class="card-description">${project.description}</p>
+                <p class="card-description">${this.highlightText(project.description, this.currentSearch)}</p>
                 <div class="card-tech">${techTags}</div>
             </div>
         `;
@@ -67,8 +67,10 @@ class ProjectsLoader {
         return card;
     }
 
-    capitalizeFirst(str) {
-        return str.charAt(0).toUpperCase() + str.slice(1);
+    highlightText(text, searchTerm) {
+        if (!searchTerm) return text;
+        const regex = new RegExp(`(${searchTerm})`, 'gi');
+        return text.replace(regex, '<mark>$1</mark>');
     }
 
     renderProjects() {
@@ -124,34 +126,32 @@ class ProjectsLoader {
         this.renderProjects();
     }
 
-    sortProjects(projects) {
-        const sorted = [...projects];
-        
-        switch (this.currentSort) {
-            case 'az':
-                sorted.sort((a, b) => a.title.localeCompare(b.title));
-                break;
-            case 'za':
-                sorted.sort((a, b) => b.title.localeCompare(a.title));
-                break;
-            case 'newest':
-                // Reverse order (newest first, assuming JSON is ordered oldest to newest)
-                sorted.reverse();
-                break;
-            default:
-                break;
-        }
-        
-        return sorted;
+    toggleClearButton() {
+        const searchBox = document.querySelector('.search-box');
+        const hasText = this.currentSearch.length > 0;
+        searchBox.classList.toggle('has-text', hasText);
     }
 
     setupEventListeners() {
         // Search input
         const searchInput = document.getElementById('project-search');
+        const searchBox = document.querySelector('.search-box');
+        const clearButton = document.getElementById('search-clear');
+        
         if (searchInput) {
             searchInput.addEventListener('input', (e) => {
                 this.currentSearch = e.target.value;
                 this.applyFilters();
+                this.toggleClearButton();
+            });
+        }
+        
+        if (clearButton) {
+            clearButton.addEventListener('click', () => {
+                this.currentSearch = '';
+                searchInput.value = '';
+                this.applyFilters();
+                this.toggleClearButton();
             });
         }
         
