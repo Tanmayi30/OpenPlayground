@@ -2483,5 +2483,19 @@
   "link": "./projects/pendulum-simulation/index.html",
   "icon": "ri-compass-3-line",
   "coverStyle": "background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white;"
+},
+{
+  "title": "Text Styler / Fancy Font Generator",
+  "category": "utility",
+  "description": "Convert input text into styled or fancy Unicode fonts for social media with one-click copy.",
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "link": "./projects/text-styler/index.html",
+  "icon": "ri-font-size-line",
+  "coverStyle": "background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); color: white;"
 }
+
 ]
