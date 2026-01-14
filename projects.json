@@ -1,4 +1,18 @@
 [
+    {
+    "title": "Sphere of Contributors",
+    "category": "utility",
+    "difficulty": "Intermediate",
+    "description": "Interactive 3D sphere showcasing OpenPlayground contributors with hover effects, responsive design, and smooth animations. A visually engaging way to celebrate community members.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/ConwaysGame/index.html",
+    "icon": "ri-grid-line",
+    "coverStyle": "background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white;"
+  },
   {
     "title": "365 Days Progress Tracker",
     "category": "utility",
