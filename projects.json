@@ -1051,6 +1051,20 @@
     "coverStyle": "background: #1e1e1e; color: #4ec9b0;"
   },
   {
+    "title": "File Uploader",
+    "category": "utility",
+    "difficulty": "Advanced",
+    "description": "Upload and manage files with drag-and-drop support.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/File-Uploader/index.html",
+    "icon": "ri-add-circle-line",
+    "coverStyle": "background: #6366f1; color: white;"
+  },
+  {
     "title": "Color Code Converter",
     "category": "utility",
     "description": "Convert between HEX, RGB, and HSL.",
@@ -1088,6 +1102,34 @@
     "link": "./projects/connect-four/index.html",
     "icon": "ri-grid-fill",
     "coverStyle": "background: #1d4ed8; color: #fbbf24;"
+  },
+  {
+    "title": "Code Editor & Compiler",
+    "category": "utility",
+    "difficulty": "Advanced",
+    "description": "Browser-based code editor with compiler UI.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/CodeEditor/index.html",
+    "icon": "ri-add-circle-line",
+    "coverStyle": "background: #6366f1; color: white;"
+  },
+  {
+    "title": "News Aggregator",
+    "category": "productivity",
+    "difficulty": "Advanced",
+    "description": "Daily news summary from multiple sources.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/news/index.html",
+    "icon": "ri-add-circle-line",
+    "coverStyle": "background: #6366f1; color: white;"
   },
   {
     "title": "Counter App",
@@ -3159,7 +3201,15 @@
   "link": "./projects/reflex-pulse/index.html",
   "icon": "ri-focus-3-line",
   "coverStyle": "background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); color: #e5e7eb;"
+  "title": "FlowLogic",
+  "category": "Educational",
+  "description": "A visual logic builder that allows users to create and connect logic flows using interactive blocks.",
+  "tech": ["HTML", "CSS", "JavaScript"],
+  "link": "./projects/flowlogic/index.html",
+  "icon": "ri-flow-chart",
+  "coverStyle": "background: linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 50%, #fae8ff 100%); color: #581c87;"
 }
+
 
 
 ]
