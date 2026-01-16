@@ -1,5 +1,20 @@
 [
   {
+    "title": "Daily Affirmation Card",
+    "category": "utility",
+    "difficulty": "Beginner",
+    "description": "A calming daily affirmation app that displays one positive affirmation each day. Features a minimal, typography-focused design with streak tracking, share functionality, and automatic daily updates.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "link": "./projects/DailyAffirmationCard/index.html",
+    "icon": "ri-heart-line",
+    "coverStyle": "background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%); color: #78350f;"
+  },
+  {
     "title": "Pixel Art Studio",
     "category": "productivity",
     "difficulty": "Intermediate",
@@ -15,6 +30,20 @@
     "link": "./projects/PixelArtStudio/index.html",
     "icon": "ri-brush-line",
     "coverStyle": "background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #c4b5fd 100%); color: white;"
+  },
+  {
+    "title": "Random Mini Challenge Generator",
+    "category": "productivity",
+    "description": "Generate small, achievable challenges to encourage healthy breaks with friendly UI and progress tracking.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "link": "./projects/ChallengeGenerator/index.html",
+    "icon": "ri-gamepad-line",
+    "coverStyle": "background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #5a6782;"
   },
   {
   "title": "365 Days No-Zero Tracker",
@@ -60,49 +89,48 @@
     "icon": "ri-grid-line",
     "coverStyle": "background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white;"
   },
-    {
-  "title": "Mood Picker",
-  "category": "utility",
-  "difficulty": "Intermediate",
-  "description": "An interactive mood picker that lets users select how they’re feeling and receive personalized messages and motivational quotes. Features a clean UI, smooth animations, responsive design, mood-based feedback, and share functionality using the Web Share API.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "link": "./projects/MoodPicker/index.html",
-  "icon": "ri-emotion-happy-line",
-  "coverStyle": "background: linear-gradient(135deg, #7db2ed 0%, #4a6fa5 100%); color: white;"
-},
   {
-  "title": "Decision Spinner",
-  "category": "utility",
-  "difficulty": "Intermediate",
-  "description": "A beautiful pastel-themed decision spinner that helps users make choices by adding custom options and spinning an animated wheel. Features smooth animations, responsive layout, pastel color palette, option management, and instant random selection.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "link": "./projects/decisionSpinner/index.html",
-  "icon": "ri-refresh-line",
-  "coverStyle": "background: linear-gradient(135deg, #8a7fcc 0%, #ff8ba7 100%); color: white;"
-}
-,
-    {
-  "title": "Minimal Countdown",
-  "category": "utility",
-  "difficulty": "Intermediate",
-  "description": "A visually minimal countdown timer that represents time using animated concentric circles and progress rings for hours, minutes, and seconds. Features smooth transitions, start/pause/reset controls, responsive design, and an intuitive visual time experience.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-  "link": "./projects/MinimalCountdown/index.html",
-  "icon": "ri-timer-line",
-  "coverStyle": "background: linear-gradient(135deg, #4a6fa5 0%, #8fb8e6 100%); color: white;"
-},
+    "title": "Mood Picker",
+    "category": "utility",
+    "difficulty": "Intermediate",
+    "description": "An interactive mood picker that lets users select how they’re feeling and receive personalized messages and motivational quotes. Features a clean UI, smooth animations, responsive design, mood-based feedback, and share functionality using the Web Share API.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/MoodPicker/index.html",
+    "icon": "ri-emotion-happy-line",
+    "coverStyle": "background: linear-gradient(135deg, #7db2ed 0%, #4a6fa5 100%); color: white;"
+  },
+  {
+    "title": "Decision Spinner",
+    "category": "utility",
+    "difficulty": "Intermediate",
+    "description": "A beautiful pastel-themed decision spinner that helps users make choices by adding custom options and spinning an animated wheel. Features smooth animations, responsive layout, pastel color palette, option management, and instant random selection.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/decisionSpinner/index.html",
+    "icon": "ri-refresh-line",
+    "coverStyle": "background: linear-gradient(135deg, #8a7fcc 0%, #ff8ba7 100%); color: white;"
+  },
+  {
+    "title": "Minimal Countdown",
+    "category": "utility",
+    "difficulty": "Intermediate",
+    "description": "A visually minimal countdown timer that represents time using animated concentric circles and progress rings for hours, minutes, and seconds. Features smooth transitions, start/pause/reset controls, responsive design, and an intuitive visual time experience.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "./projects/MinimalCountdown/index.html",
+    "icon": "ri-timer-line",
+    "coverStyle": "background: linear-gradient(135deg, #4a6fa5 0%, #8fb8e6 100%); color: white;"
+  },
   {
     "title": "365 Days Progress Tracker",
     "category": "utility",
@@ -137,9 +165,9 @@
     "category": "educational",
     "description": "Visually rich representation of chemical elements with color-coding, detailed information, and search functionality.",
     "tech": [
-        "HTML",
-        "CSS",
-        "JS"
+      "HTML",
+      "CSS",
+      "JS"
     ],
     "link": "./projects/InteractivePeriodicTable/index.html",
     "icon": "fas fa-atom",
@@ -229,11 +257,10 @@
       "CSS",
       "JavaScript"
     ],
-"link": "./projects/color-palette-generator/index.html",
+    "link": "./projects/color-palette-generator/index.html",
     "icon": "ri-palette-line",
     "coverClass": "palette-cover"
   },
-
   {
     "title": "Sound Reaction System",
     "category": "utility",
@@ -323,6 +350,19 @@
     "icon": "ri-grid-line",
     "coverClass": "tictactoe-cover"
   },
+    {
+    "title": "Dianosur",
+    "category": "puzzle",
+    "description": "dianosur game ",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/dianosur/index.html",
+    "icon": "ri-dinosaur-line",
+    "coverClass": "quiz-cover"
+  },
   {
     "title": "Fun balloon popping game",
     "category": "game",
@@ -340,6 +380,9 @@
     "title": "Ultimate Ride ",
     "category": "game",
     "description": "A fast-paced racing game with neon visuals and challenging tracks.",
+    "title": "Stick With Hero Game",
+    "category": "game",
+    "description": "A simple and engaging stick hero game where players control a character to build sticks and cross platforms while avoiding obstacles.",
     "tech": [
       "HTML",
       "CSS",
@@ -347,6 +390,8 @@
     ],
     "link": "./projects/ultimate-ride/index.html",
     "icon": "ri-car-line",
+    "link": "./projects/stick-with-hero/index.html",
+    "icon": "ri-walk-line",
     "coverStyle": "background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white;"
   },
   {
@@ -402,19 +447,18 @@
     "coverStyle": "background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white;"
   },
   {
-  "title": "Flappy Bird ",
-  "category": "game",
-  "description": "A polished Flappy Bird–style arcade game featuring smooth physics, start screen, collision detection, and score tracking, built with vanilla web technologies.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JS"
-  ],
-  "link": "./projects/flappy-bird/index.html",
-  "icon": "ri-gamepad-line",
-  "coverClass": "flappy-bird-cover"
+    "title": "Flappy Bird ",
+    "category": "game",
+    "description": "A polished Flappy Bird–style arcade game featuring smooth physics, start screen, collision detection, and score tracking, built with vanilla web technologies.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/flappy-bird/index.html",
+    "icon": "ri-gamepad-line",
+    "coverClass": "flappy-bird-cover"
   },
-
   {
     "title": "Space Invaders",
     "category": "game",
@@ -428,7 +472,6 @@
     "icon": "ri-rocket-line",
     "coverClass": "space-invaders-cover"
   },
-
   {
     "title": "Image Preview Uploader",
     "category": "utility",
@@ -442,18 +485,18 @@
     "icon": "ri-image-add-line",
     "coverStyle": "background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white;"
   },
-   {
-  "title": "Basket Ball Game ",
-  "category": "game",
-  "description": "A 3D backet ball shooting game with score tracking and dynamic hoop movement, built using Three.js for immersive graphics and smooth gameplay.",
-  "tech": [
-    "HTML",
-    "CSS",
-    "JS"
-  ],
-  "link": "./projects/basket-ball-game/index.html",
-  "icon": "ri-basketball-line",
-  "coverClass": "background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white;"
+  {
+    "title": "Basket Ball Game ",
+    "category": "game",
+    "description": "A 3D backet ball shooting game with score tracking and dynamic hoop movement, built using Three.js for immersive graphics and smooth gameplay.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "link": "./projects/basket-ball-game/index.html",
+    "icon": "ri-basketball-line",
+    "coverClass": "background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white;"
   },
   {
     "title": "Stack vs Queue Visualizer",
@@ -635,8 +678,9 @@
     ],
     "link": "./projects/kanban-board/index.html",
     "icon": "ri-kanban-view",
-    "coverStyle": "background:#667eea; color:white"},
-    {
+    "coverStyle": "background:#667eea; color:white"
+  },
+  {
     "description": "A personal diary app to write, view, search, and manage daily entries with local data persistence.",
     "tech": [
       "HTML",
@@ -2412,13 +2456,18 @@
     "coverStyle": "background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: #3b82f6;"
   },
   {
-  "title": "GitHub User Finder",
-  "category": "utility",
-  "description": "Search and explore GitHub user profiles with recent repositories in real time.",
-  "tech": ["HTML", "CSS", "JavaScript", "GitHub API"],
-  "link": "./projects/gitHub-user-finder/index.html",
-  "icon": "ri-github-fill",
-  "coverStyle": "background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: #ffffff;"
+    "title": "GitHub User Finder",
+    "category": "utility",
+    "description": "Search and explore GitHub user profiles with recent repositories in real time.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub API"
+    ],
+    "link": "./projects/gitHub-user-finder/index.html",
+    "icon": "ri-github-fill",
+    "coverStyle": "background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: #ffffff;"
   },
   {
     "title": "15 Sliding Puzzle",
@@ -2857,9 +2906,9 @@
     "coverStyle": "background: linear-gradient(135deg, #ff7043 0%, #ffab91 100%); color: white;"
   },
   {
-    "title": "Simon Game",
+    "title": "Simon Says Game",
     "category": "game",
-    "description": "Classic Simon Says memory game with color sequences and increasing difficulty levels.",
+    "description": "Classic Simon Says memory game with smooth sound effects, circular design, and high score tracking.",
     "tech": [
       "HTML",
       "CSS",
@@ -2867,7 +2916,7 @@
     ],
     "link": "./projects/simon-game/index.html",
     "icon": "ri-record-circle-line",
-    "coverStyle": "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
+    "coverStyle": "background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white;"
   },
   {
     "title": "Solar System Simulation",
@@ -3256,7 +3305,11 @@
     "title": "Chess vs Computer",
     "category": "game",
     "description": "Play classic chess against a strong computer with full rules and clean UI.",
-    "tech": ["HTML", "CSS", "JavaScript"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "./projects/chess-vs-computer/index.html",
     "icon": "ri-chess-line",
     "coverStyle": "background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #f5f5f5;"
@@ -3265,7 +3318,11 @@
     "title": "Idea of the Day",
     "category": "productivity",
     "description": "A minimal daily inspiration web app that presents one curated idea per day, focused on projects, habits, and learning. Designed for simplicity, consistency, and distraction-free daily engagement.",
-    "tech": ["HTML", "CSS", "JavaScript"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "https://yugenjr.github.io/IdeaOfTheDay/",
     "icon": "ri-lightbulb-flash-line",
     "coverStyle": "background: linear-gradient(135deg, #0f172a 0%, #020617 100%); color: #e5e7eb;"
@@ -3274,7 +3331,12 @@
     "title": "Daily Gratitude Note",
     "category": "utility",
     "description": "A warm and simple daily gratitude app to record things you are thankful for. Features streak tracking, date navigation, and motivational quotes.",
-    "tech": ["HTML", "CSS", "JavaScript", "LocalStorage"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "LocalStorage"
+    ],
     "link": "./projects/DailyGratitudeApp/index.html",
     "icon": "ri-heart-pulse-line",
     "coverStyle": "background: linear-gradient(135deg, #FF8066 0%, #FFB7A8 100%); color: white;"
@@ -3283,7 +3345,11 @@
     "title": "Color Mood Board Generator",
     "category": "utility",
     "description": "A calm, modern web utility that generates visually harmonious color palettes based on mood. Users can switch between warm, pastel, dark, or random palettes, regenerate combinations, copy hex codes, and export palettes as images. Built with a strong focus on visual balance and simple interactivity.",
-    "tech": ["HTML", "CSS", "JavaScript"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "https://yugenjr.github.io/ColorMoodBoard/",
     "icon": "ri-palette-line",
     "coverStyle": "background: linear-gradient(135deg, #fef3c7 0%, #fde68a 40%, #f59e0b 100%); color: #1f2937;"
@@ -3293,7 +3359,11 @@
     "category": "utility",
     "difficulty": "Intermediate",
     "description": "A calming, interactive relaxation experience with guided breathing cues, smooth animations, subtle motion, and mindful visual feedback. Designed to help users pause, breathe, and reset with a single click.",
-    "tech": ["HTML", "CSS", "JavaScript"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "./projects/one-click-relax-button/index.html",
     "icon": "ri-heart-pulse-line",
     "coverStyle": "background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #d1fae5 100%); color: #064e3b;"
@@ -3302,7 +3372,11 @@
     "title": "Neon Snake Arena",
     "category": "game",
     "description": "A neon-styled Snake game with smooth motion, power-ups, and arena challenges.",
-    "tech": ["HTML", "CSS", "JS"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
     "link": "./projects/Neon_Snake_Arena/index.html",
     "icon": "ri-gamepad-line",
     "coverStyle": "background: linear-gradient(135deg, #020617 0%, #22d3ee 100%); color:#ecfeff;"
@@ -3311,7 +3385,11 @@
     "title": "Portal Flip Puzzle",
     "category": "game",
     "description": "Logic-based puzzle where portals flip gravity and orientation to reach the exit.",
-    "tech": ["HTML", "CSS", "JS"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
     "link": "./projects/Portal_Flip_Puzzle/index.html",
     "icon": "ri-exchange-box-line",
     "coverStyle": "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color:#e5e7eb;"
@@ -3321,7 +3399,11 @@
     "category": "game",
     "difficulty": "Intermediate",
     "description": "A one-button reflex game where players must tap at the perfect moment as an expanding pulse aligns with a target ring. Focused on timing, precision, and smooth visual feedback.",
-    "tech": ["HTML", "CSS", "JavaScript"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "./projects/reflex-pulse/index.html",
     "icon": "ri-focus-3-line",
     "coverStyle": "background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); color: #e5e7eb;"
@@ -3330,10 +3412,16 @@
     "title": "FlowLogic",
     "category": "Educational",
     "description": "A visual logic builder that allows users to create and connect logic flows using interactive blocks.",
-    "tech": ["HTML", "CSS", "JavaScript"],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "link": "./projects/flowlogic/index.html",
     "icon": "ri-flow-chart",
     "coverStyle": "background: linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 50%, #fae8ff 100%); color: #581c87;"
+  }
+]
   },
   {
   "title": "UI As Enemy",
@@ -3343,6 +3431,16 @@
   "link": "./projects/ui-as-enemy/index.html",
   "icon": "ri-bug-line",
   "coverStyle": "background: linear-gradient(135deg, #1f2933 0%, #111827 100%); color: #f9fafb;"
+},
+{
+  "title": "CPU Scheduling Visualizer",
+  "category": "utility",
+  "difficulty": "Advanced",
+  "description": "An interactive CPU scheduling visualizer that helps users understand how common scheduling algorithms work. Users can define processes, select algorithms, and watch animated Gantt chart execution with calculated waiting and turnaround times for educational clarity.",
+  "tech": ["HTML", "CSS", "JavaScript"],
+  "link": "./projects/CPU Scheduling Visualizer/index.html",
+  "icon": "ri-cpu-line",
+  "coverStyle": "background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #020617 100%); color: #e5e7eb;"
 }
 
 ]
