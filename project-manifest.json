@@ -1277,6 +1277,11 @@
       "folder": "WorldMeetingPlanner",
       "path": "./projects/WorldMeetingPlanner/project.json",
       "link": "./projects/WorldMeetingPlanner/index.html"
+    },
+    {
+      "folder": "motion-engine-lab",
+      "path": "./projects/motion-engine-lab/project.json",
+      "link": "./projects/motion-engine-lab/index.html"
     }
   ]
 }
