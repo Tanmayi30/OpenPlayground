@@ -431,7 +431,8 @@ class Engine {
     }
 
     updateHUD(dt) {
-        document.getElementById('debug-fps').innerText = Math.round(1 / dt);
+        const fps = (typeof dt === 'number' && dt > 0) ? Math.round(1 / dt) : 0;
+        document.getElementById('debug-fps').innerText = fps;
         document.getElementById('debug-pos').innerText = `${this.posX.toFixed(1)}, ${this.posY.toFixed(1)}`;
 
         // Simple collision warning
