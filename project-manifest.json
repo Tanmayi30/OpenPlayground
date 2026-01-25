@@ -1797,6 +1797,11 @@
       "folder": "WorldMeetingPlanner",
       "path": "./projects/WorldMeetingPlanner/project.json",
       "link": "./projects/WorldMeetingPlanner/index.html"
+    },
+    {
+      "folder": "ResonanceForge",
+      "path": "./projects/resonanceforge/project.json",
+      "link": "./projects/resonanceforge/index.html"
     }
   ]
 }
