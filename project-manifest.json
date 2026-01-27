@@ -2009,6 +2009,11 @@
       "link": "./projects/aesthetic-quote-generator/index.html"
     },
     {
+      "folder": "blogGenerator",
+      "path": "./projects/blogGenerator/project.json",
+      "link": "./projects/blogGenerator/index.html"
+    },
+    {
       "folder": "mousetone",
       "path": "./projects/mousetone/project.json",
       "link": "./projects/mousetone/index.html"
