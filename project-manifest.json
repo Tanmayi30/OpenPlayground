@@ -2082,5 +2082,10 @@
       
      
     }
+    {
+      "folder": "Rainy_Day",
+      "path": "./projects/Rainy_Day/project.json",
+      "link": "./projects/Rainy_Day/index.html"
+    }
   ]
 }
