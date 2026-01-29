@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmRoute Wellness Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CalmRoute Wellness Planner</h1>
+        <button id="darkModeToggle">🌙</button>
+    </header>
+    <nav>
+        <button data-section="routine">Routine</button>
+        <button data-section="mood">Mood</button>
+        <button data-section="breathing">Breathing</button>
+        <button data-section="analytics">Analytics</button>
+    </nav>
+    <main>
+        <section id="routine" class="active">
+            <h2>Routine Builder</h2>
+            <div id="routineBlocks"></div>
+            <button id="addBlock">Add Time Block</button>
+        </section>
+        <section id="mood">
+            <h2>Mood Tracker & Journal</h2>
+            <div id="moodTracker"></div>
+            <textarea id="journal" placeholder="Write your thoughts..."></textarea>
+            <button id="saveMood">Save Mood</button>
+        </section>
+        <section id="breathing">
+            <h2>Breathing/Meditation Timer</h2>
+            <div id="breathingTimer"></div>
+            <button id="startBreathing">Start</button>
+        </section>
+        <section id="analytics">
+            <h2>Weekly Wellness Analytics</h2>
+            <div id="analyticsData"></div>
+            <div id="streaksBadges"></div>
+        </section>
+    </main>
+    <footer>
+        <span>AI Suggestions & Notifications coming soon!</span>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
