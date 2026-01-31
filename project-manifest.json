@@ -1919,6 +1919,11 @@
       "link": "./projects/randomData/index.html"
     },
     {
+      "folder": "JSON-Table",
+      "path": "./projects/JSON-Table/project.json",
+      "link": "./projects/JSON-Table/index.html"
+    },
+    {
       "folder": "baseEncoder",
       "path": "./projects/baseEncoder/project.json",
       "link": "./projects/baseEncoder/index.html"
