@@ -1964,6 +1964,11 @@
       "link": "./projects/ToDoIst/index.html"
     },
     {
+      "folder": "thumbnail",
+      "path": "./projects/thumbnail/project.json",
+      "link": "./projects/thumbnail/index.html"
+    },
+    {
       "folder": "Resumator",
       "path": "./projects/Resumator/project.json",
       "link": "./projects/Resumator/index.html"
