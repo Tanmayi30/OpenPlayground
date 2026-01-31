@@ -1909,6 +1909,16 @@
       "link": "./projects/webkernel/index.html"
     },
     {
+      "folder": "randomData",
+      "path": "./projects/randomData/project.json",
+      "link": "./projects/randomData/index.html"
+    },
+    {
+      "folder": "baseEncoder",
+      "path": "./projects/baseEncoder/project.json",
+      "link": "./projects/baseEncoder/index.html"
+    },
+    {
       "folder": "Whack a Box",
       "path": "./projects/Whack a Box/project.json",
       "link": "./projects/Whack a Box/index.html"
@@ -1962,12 +1972,12 @@
       "folder": "Focus Timer Pro",
       "path": "./projects/Focus-Timer-Pro/project.json",
       "link": "./projects/Focus-Timer-Pro/index.html"
-    }
+    },
      {
       "folder": "Sharks",
       "path": "./projects/Sharks/project.json",
       "link": "./projects/Sharks/index.html"
-    }
+    },
     {
       "folder": "Calci",
       "path": "./projects/Calci/project.json",
