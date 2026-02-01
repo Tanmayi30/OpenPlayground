@@ -2060,7 +2060,19 @@
       "folder": "SpaceWars",
       "path": "./projects/SpaceWars/project.json",
       "link": "./projects/SpaceWars/index.html"
+    },
+    {
+      "folder": "internet-speed-status-checker",
+      "path": "./projects/internet-speed-status-checker/project.json",
+      "link": "./projects/internet-speed-status-checker/index.html"
+    },
+  
+      {
+      "folder": "certificate-generator",
+      "path": "./projects/certificate-generator/project.json",
+      "link": "./projects/certificate-generator/index.html"
     }
+  
   
   
   ]
