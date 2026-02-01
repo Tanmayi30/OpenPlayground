@@ -1735,5 +1735,10 @@
       "path": "./projects/Digital Mood Landscape/project.json",
       "link": "./projects/Digital Mood Landscape/index.html"
     }
+    {
+      "folder": "FocusYou",
+      "path": "./projects/FocusYou/project.json",
+      "link": "./projects/FocusYou/index.html"
+    }
   ]
 }
