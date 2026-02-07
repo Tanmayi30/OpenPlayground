@@ -2174,6 +2174,11 @@
       "folder": "smart-idle-reminder",
       "path": "./projects/smart-idle-reminder/project.json",
       "link": "./projects/smart-idle-reminder/index.html"
+  },
+  {
+      "folder": "Random-Username-Generator",
+      "path": "./projects/Random-Username-Generator/project.json",
+      "link": "./projects/Random-Username-Generator/index.html"
   }
   
   ]
