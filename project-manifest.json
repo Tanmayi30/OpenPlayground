@@ -1982,6 +1982,11 @@
       "folder": "binary-search-tree-visualizer",
       "path": "./projects/binary-search-tree-visualizer/project.json",
       "link": "./projects/binary-search-tree-visualizer/index.html"
+    },
+    {
+      "folder": "finite-automaton-simulator",
+      "path": "./projects/finite-automaton-simulator/project.json",
+      "link": "./projects/finite-automaton-simulator/index.html"
     }
   ]
 }
