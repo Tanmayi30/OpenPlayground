@@ -2122,6 +2122,13 @@
       "folder": "SpaceWars",
       "path": "./projects/SpaceWars/project.json",
       "link": "./projects/SpaceWars/index.html"
+    }
+    {
+      "folder": "SpeedType",
+      "path": "./projects/SpeedType/project.json",
+      "link": "./projects/SpeedType/index.html"
+    }
+  
     },
       {
       "folder": "internet-speed-status-checker",
