@@ -2074,6 +2074,9 @@
       "link": "./projects/Digital Mood Landscape/index.html"
     },
     {
+      "folder": "Tower_Defence",
+      "path": "./projects/Tower_Defence/project.json",
+      "link": "./projects/Tower_Defence/index.html"
       "folder": "snake world",
       "path": "./projects/snake world/project.json",
       "link": "./projects/snake world/index.html"
