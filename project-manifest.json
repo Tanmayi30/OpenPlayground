@@ -439,6 +439,16 @@
       "link": "./projects/Cryptographic-Protocol-Simulator/index.html"
     },
     {
+      "folder": "calcx-calculator-app",
+      "path": "./projects/calcx-calculator-app/project.json",
+      "link": "./projects/calcx-calculator-app/index.html"
+    },
+    {
+      "folder": "quick-notes",
+      "path": "./projects/quick-notes/project.json",
+      "link": "./projects/quick-notes/index.html"
+    },
+    {
       "folder": "css-shapes-and-corners",
       "path": "./projects/css-shapes-and-corners/project.json",
       "link": "./projects/css-shapes-and-corners/index.html"
