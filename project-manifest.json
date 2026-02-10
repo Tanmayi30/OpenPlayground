@@ -2263,6 +2263,11 @@
       "folder": "clipboard-activity-monitor",
       "path": "./projects/clipboard-activity-monitor/project.json",
       "link": "./projects/clipboard-activity-monitor/index.html"
+  },
+  {
+      "folder": "browser-storage-explorer",
+      "path": "./projects/browser-storage-explorer/project.json",
+      "link": "./projects/browser-storage-explorer/index.html"
   }
   ]
 }
