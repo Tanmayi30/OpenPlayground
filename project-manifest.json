@@ -2097,6 +2097,9 @@
       "folder": "Event Manager",
       "path": "./projects/Event Manager/project.json",
       "link": "./projects/Event Manager/index.html"
+    },
+    {
+      
       "folder": "RPG-character",
       "path": "./projects/RPG-character/project.json",
       "link": "./projects/RPG-character/index.html"
