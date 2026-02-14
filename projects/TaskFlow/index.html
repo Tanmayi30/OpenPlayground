@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Smart Task Organizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TaskFlow</h1>
+      <p>Smart Task Organizer</p>
+    </header>
+    <main>
+      <section class="task-input">
+        <input type="text" id="taskName" placeholder="Enter task...">
+        <input type="date" id="taskDeadline">
+        <button id="addTaskBtn">Add Task</button>
+          <select id="taskPriority">
+            <option value="normal">Normal</option>
+            <option value="high">High</option>
+            <option value="low">Low</option>
+          </select>
+          <button id="suggestTaskBtn">Suggest Task</button>
+      </section>
+      <section class="task-list">
+        <h2>Your Tasks</h2>
+        <ul id="tasks"></ul>
+          <div id="suggestionBox" class="suggestion-box"></div>
+      </section>
+      <section class="analytics">
+        <h2>Progress Analytics</h2>
+        <div id="analyticsContent"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 TaskFlow. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

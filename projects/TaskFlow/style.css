@@ -1,0 +1,117 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 32px;
+}
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+header h1 {
+  color: #2d6cdf;
+  margin: 0;
+}
+header p {
+  color: #555;
+  margin-top: 8px;
+}
+.task-input {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.task-input input, .task-input button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+.task-input button {
+  background: #2d6cdf;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.task-input button:hover {
+  background: #1a4fa3;
+}
+select#taskPriority {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background: #f0f4fa;
+}
+.task-list {
+  margin-bottom: 32px;
+}
+.task-list h2 {
+  color: #2d6cdf;
+}
+#tasks {
+  list-style: none;
+  padding: 0;
+}
+#tasks li {
+  background: #f0f4fa;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#tasks li.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+/* Priority color coding */
+#tasks li.high {
+  border-left: 6px solid #e74c3c;
+}
+#tasks li.normal {
+  border-left: 6px solid #2d6cdf;
+}
+#tasks li.low {
+  border-left: 6px solid #27ae60;
+}
+.analytics {
+  margin-bottom: 24px;
+}
+.analytics h2 {
+  color: #2d6cdf;
+}
+/* Suggestion box styling */
+.suggestion-box {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fffbe6;
+  border-radius: 8px;
+  color: #b8860b;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.08);
+}
+footer {
+  text-align: center;
+  color: #888;
+  margin-top: 24px;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 16px;
+  }
+  .task-input {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
