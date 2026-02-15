@@ -2314,6 +2314,11 @@
       "folder": "privacy-permission-checker",
       "path": "./projects/privacy-permission-checker/project.json",
       "link": "./projects/privacy-permission-checker/index.html"
+  },
+   {
+      "folder": "Dark and Light Mode Toggle",
+      "path": "./projects/Dark-and-Light-Mode-Toggle/project.json",
+      "link": "./projects/Dark-and-Light-Mode-Toggle/index.html"
   }
   ]
 }
