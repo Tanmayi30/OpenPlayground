@@ -2323,6 +2323,12 @@
       "link": "./projects/Dark-and-Light-Mode-Toggle/index.html"
   },
   {
+      "folder": "Button Collection UI",
+      "path": "./projects/Button-Collection-UI/project.json",
+      "link": "./projects/Button-Collection-UI/index.html"
+    
+  },
+    {
       "folder": "Dashboard Sidebar UI",
       "path": "./projects/Dashboard-Sidebar-UI/project.json",
       "link": "./projects/Dashboard-Sidebar-UI/index.html"
