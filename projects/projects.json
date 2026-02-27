@@ -20,5 +20,12 @@
     "category": "utility",
     "description": "An event discovery and RSVP platform for local meetups and college communities.",
     "path": "projects/EventNest/index.html"
+  },
+  {
+    "name": "BookBuddy",
+    "type": "Frontend (HTML/CSS/JS)",
+    "category": "utility",
+    "description": "A book recommendation and reading log app for avid readers.",
+    "path": "projects/BookBuddy/index.html"
   }
 ]
