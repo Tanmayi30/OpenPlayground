@@ -1,21 +1,9 @@
-{
-  "name": "BookBuddy",
-  "type": "Frontend (HTML/CSS/JS)",
-  "category": "utility",
-  "description": "A book recommendation and reading log app for avid readers.",
-  "features": [
-    "Book recommendations by genre",
-    "Personal reading log with local storage",
-    "Responsive and accessible UI",
-    "Search and filter log entries",
-    "Export log to CSV"
-  ],
-  "screenshots": [],
-  "checklist": [
-    "I have tested my project locally",
-    "My project follows the repository structure",
-    "My project is responsive (if frontend)",
-    "I will add my project to projects.json (NOT index.html)",
-    "I have included setup instructions for backend (if full-stack)"
-  ]
-}
+[
+  {
+    "name": "BookBuddy",
+    "type": "Frontend (HTML/CSS/JS)",
+    "category": "utility",
+    "description": "A book recommendation and reading log app for avid readers.",
+    "path": "projects/BookBuddy/index.html"
+  }
+]
