@@ -2357,6 +2357,10 @@
       "folder": "Dashboard Sidebar UI",
       "path": "./projects/Dashboard-Sidebar-UI/project.json",
       "link": "./projects/Dashboard-Sidebar-UI/index.html"
+  },{
+      "folder": "Historical Leaders Website",
+      "path": "./projects/historical-leaders-website/project.json",
+      "link": "./projects/historical-leaders-website/index.html"
   },
    {
       "folder": "World Wonders Gallery",
