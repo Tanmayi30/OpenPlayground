@@ -1,7 +1,7 @@
 {
   "version": "2.1",
   "generated": "2026-01-24T16:38:07.796Z",
-  "count": 361,
+  "count": 362,
   "projects": [
     {
       "folder": "15 Sliding Puzzle",
@@ -452,6 +452,11 @@
       "folder": "Budgetly",
       "path": "./projects/Budgetly/project.json",
       "link": "./projects/Budgetly/index.html"
+    },
+    {
+      "folder": "BudgetTrail-Travel-Budget-Tracker",
+      "path": "./projects/BudgetTrail-Travel-Budget-Tracker/project.json",
+      "link": "./projects/BudgetTrail-Travel-Budget-Tracker/index.html"
     },
     {
       "folder": "TempShift",
