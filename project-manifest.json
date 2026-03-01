@@ -1,7 +1,7 @@
 {
   "version": "2.1",
   "generated": "2026-01-24T16:38:07.796Z",
-  "count": 362,
+  "count": 363,
   "projects": [
     {
       "folder": "15 Sliding Puzzle",
@@ -492,6 +492,11 @@
       "folder": "TipWise",
       "path": "./projects/TipWise/project.json",
       "link": "./projects/TipWise/index.html"
+    },
+    {
+      "folder": "TripSync-Collaborative-Trip-Planner",
+      "path": "./projects/TripSync-Collaborative-Trip-Planner/project.json",
+      "link": "./projects/TripSync-Collaborative-Trip-Planner/index.html"
     },
     {
       "folder": "TriDuel",
